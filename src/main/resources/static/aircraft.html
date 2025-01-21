@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Aircraft List</h1>
+<table id="aircraftTable">
+    <thead>
+    <tr>
+        <th>Aircraft Code</th>
+        <th>Model</th>
+        <th>Capacity</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Строки таблицы будут добавлены здесь динамически -->
+    </tbody>
+</table>
+<button id="addAircraftBtn">Add Aircraft</button>
+
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Aircraft</h2>
+        <form id="editForm">
+            <input type="hidden" id="editIndex">
+            <label for="editAircraftCode">Aircraft Code:</label>
+            <input type="text" id="editAircraftCode" required><br>
+            <label for="editModel">Model:</label>
+            <input type="text" id="editModel" required><br>
+            <label for="editCapacity">Capacity:</label>
+            <input type="number" id="editCapacity" required><br>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+<div id="addModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Aircraft</h2>
+        <form id="addForm">
+            <label for="addAircraftCode">Aircraft Code:</label>
+            <input type="text" id="addAircraftCode" required><br>
+            <label for="addModel">Model:</label>
+            <input type="text" id="addModel" required><br>
+            <label for="addCapacity">Capacity:</label>
+            <input type="number" id="addCapacity" required><br>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
+<div class="navigation-buttons">
+    <button onclick="window.location.href='index.html'">Back to Flights</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
