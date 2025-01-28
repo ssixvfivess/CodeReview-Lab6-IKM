@@ -1,11 +1,16 @@
 package ru.ikm.flight.schedule.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.ikm.flight.schedule.Airports;
+import org.springframework.stereotype.Repository;
+import ru.ikm.flight.schedule.model.Airports;
 
 import java.util.List;
 
-public interface RepAirports extends JpaRepository<Airports, Long> {
+@Repository
+public interface RepAirports extends JpaRepository<Airports, String> {
+}
+
+/*public interface RepAirports extends JpaRepository<Airports, Long> {
     List<Airports> findAllAirports();
 
     Airports SaveAirports (Airports air);
@@ -15,4 +20,4 @@ public interface RepAirports extends JpaRepository<Airports, Long> {
     Airports UpdateAirports (Airports air);
 
     void DeleteAirports (String airoport_code);
-}
+}*/

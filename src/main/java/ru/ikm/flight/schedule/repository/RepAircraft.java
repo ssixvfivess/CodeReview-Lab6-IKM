@@ -1,11 +1,16 @@
 package ru.ikm.flight.schedule.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.ikm.flight.schedule.Aircraft;
+import org.springframework.stereotype.Repository;
+import ru.ikm.flight.schedule.model.Aircraft;
 
 import java.util.List;
 
-public interface RepAircraft extends JpaRepository <Aircraft, Long> {
+@Repository
+public interface RepAircraft extends JpaRepository <Aircraft, String> {
+}
+
+/*public interface RepAircraft extends JpaRepository <Aircraft, Long> {
     List<Aircraft> findAllAircraft();
 
     Aircraft SaveAircraft (Aircraft air);
@@ -15,4 +20,4 @@ public interface RepAircraft extends JpaRepository <Aircraft, Long> {
     Aircraft UpdateAircraft (Aircraft air);
 
     void DeleteAircraft (String aircraft_code);
-}
+}*/

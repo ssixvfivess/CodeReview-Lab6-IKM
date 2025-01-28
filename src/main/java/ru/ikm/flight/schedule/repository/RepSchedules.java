@@ -1,11 +1,16 @@
 package ru.ikm.flight.schedule.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.ikm.flight.schedule.Schedules;
+import org.springframework.stereotype.Repository;
+import ru.ikm.flight.schedule.model.Schedules;
 
 import java.util.List;
 
-public interface RepSchedules extends JpaRepository<Schedules, Long> {
+@Repository
+public interface RepSchedules extends JpaRepository<Schedules, Integer> {
+}
+
+/*public interface RepSchedules extends JpaRepository<Schedules, Long> {
     List<Schedules> findAllSchedules();
 
     Schedules SaveSchedules (Schedules air);
@@ -15,4 +20,4 @@ public interface RepSchedules extends JpaRepository<Schedules, Long> {
     Schedules UpdateSchedules (Schedules air);
 
     void DeleteSchedules (String scheduled_date);
-}
+}*/
