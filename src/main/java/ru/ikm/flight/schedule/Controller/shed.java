@@ -1,20 +1,15 @@
 package ru.ikm.flight.schedule.Controller;
 
-import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import ru.ikm.flight.schedule.model.Schedules;
-import ru.ikm.flight.schedule.repository.RepSchedules;
 import ru.ikm.flight.schedule.service.ShedulesService;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-//@RequestMapping("api/v1/shed")
-//@AllArgsConstructor
 public class shed {
 
     @Autowired
@@ -51,30 +46,3 @@ public class shed {
         return ResponseEntity.noContent().build();
     }
 }
-
-    /*private final SchedulesS service;
-
-    @GetMapping
-    public List<Schedules> findAllSchedules() {
-        return service.findAllSchedules();
-    }
-
-    @PostMapping("SaveSchedules")
-    public Schedules SaveSchedules (@RequestBody Schedules air) {
-        return service.SaveSchedules(air);
-    }
-
-    @GetMapping ("/{scheduled_date}")
-    public Schedules findSchedulesByCode (@PathVariable String scheduled_date) {
-        return service.findSchedulesByCode(scheduled_date);
-    }
-
-    @PutMapping ("UpdateSchedules")
-    public Schedules UpdateSchedules (Schedules air) {
-        return service.UpdateSchedules(air);
-    }
-
-    @DeleteMapping ("DeleteSchedules/{scheduled_date}")
-    public void DeleteSchedules (@PathVariable String scheduled_date) {
-        service.DeleteSchedules(scheduled_date);
-    }*/

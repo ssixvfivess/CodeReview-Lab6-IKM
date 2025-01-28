@@ -11,9 +11,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 
-//@Data
-//@Builder
-//@Entity
 public class Schedules {
 
     @Id
@@ -26,13 +23,4 @@ public class Schedules {
 
     @Column(name="scheduled_date")
     private LocalDate scheduledDate;
-
-    /*@Id
-    @GeneratedValue
-    private Long schedule_id;
-    @Column(unique = true)
-    private int flight_id;
-    @Column(unique = true)
-    private int aircraft_id;
-    private String scheduled_date;*/
 }

@@ -35,7 +35,7 @@ public class AircraftService {
             updatedAircraft.setAircraftCode(code);
             return  aircraftRepository.save(updatedAircraft);
         } else {
-            return null; // Or throw an exception
+            return null;
         }
     }
 

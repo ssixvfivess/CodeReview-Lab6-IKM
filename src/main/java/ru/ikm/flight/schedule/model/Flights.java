@@ -2,7 +2,6 @@ package ru.ikm.flight.schedule.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import ru.ikm.flight.schedule.model.Airports;
 
 import java.time.LocalTime;
 
@@ -13,9 +12,6 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 
-//@Data
-//@Builder
-//@Entity
 public class Flights {
 
     @Id
@@ -31,18 +27,8 @@ public class Flights {
     private Airports arrivalAirport;
 
     @Column(name = "departure_time")
-    private LocalTime departureTime; // LocalTime
+    private LocalTime departureTime;
 
     @Column(name = "arrival_time")
-    private LocalTime arrivalTime; // LocalTime
-
-    /*@Id
-    @GeneratedValue
-    private Long flight_id;
-    @Column(unique = true)
-    private String flight_number;
-    private int departure_airoport_id;
-    private int arrival_airoport_id;
-    private String departure_time;
-    private String arrival_time;*/
+    private LocalTime arrivalTime;
 }
