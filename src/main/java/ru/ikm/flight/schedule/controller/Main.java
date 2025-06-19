@@ -62,7 +62,8 @@ public class Main {
      * @return ResponseEntity с обновленным воздушным судном (200 OK) или статус 404 Not Found, если судно не найдено
      */
     @PutMapping("/api/aircrafts/{aircraft_code}")
-    public ResponseEntity<Aircraft> updateAircraft(@PathVariable String aircraft_code, @RequestBody Aircraft updatedAircraft) {
+    public ResponseEntity<Aircraft> updateAircraft(@PathVariable String aircraft_code,
+                                                   @RequestBody Aircraft updatedAircraft) {
         Aircraft updated = aircraftService.updateAircraft(aircraft_code, updatedAircraft);
         if (updated != null){
             return ResponseEntity.ok(updated);

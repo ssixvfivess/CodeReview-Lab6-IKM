@@ -1,4 +1,4 @@
-package ru.ikm.flight.exitOnProgram;
+package ru.ikm.flight.schedule;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

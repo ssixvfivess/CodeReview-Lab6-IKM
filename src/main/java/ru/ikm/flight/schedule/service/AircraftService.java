@@ -29,7 +29,7 @@ public class AircraftService {
 
     /**
      * Находит воздушное судно по коду.
-     * @param code код воздушного судна (IATA/ICAO)
+     * @param code код воздушного судна
      * @return Optional с найденным объектом или пустой Optional
      */
     public Optional<Aircraft> getAircraftByCode(String code) {
